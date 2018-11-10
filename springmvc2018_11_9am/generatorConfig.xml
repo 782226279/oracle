@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+	<classPathEntry
+		location="E:/oracle/help/mysql/mysql-connector-java-5.1.18-bin.jar" />
+
+
+	<context id="context1">
+
+		<!--数据库链接地址账号密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/test" userId="root"
+			password="1234" />
+
+		<!--生成Model类存放位置 -->
+		<javaModelGenerator targetPackage="com.bean"
+			targetProject="springmvc2018_11_9am/src" />
+
+		<!--生成映射文件存放位置 -->
+		<sqlMapGenerator targetPackage="com.mapper"
+			targetProject="springmvc2018_11_9am/src" />
+
+		<!--生成Dao类存放位置 -->
+		<javaClientGenerator targetPackage="com.dao"
+			targetProject="springmvc2018_11_9am/src" type="XMLMAPPER" />
+
+		<!--生成对应表及类名 -->
+		<table tableName="goods" domainObjectName="Goods"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+	</context>
+</generatorConfiguration>
